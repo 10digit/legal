@@ -1,0 +1,14 @@
+{
+    "name": "legal",
+    "version": "0.0.0",
+    "main": "./legal.js",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "angular": "*",
+        "10digit.utils": "~0.0.0"
+    }
+}
