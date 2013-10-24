@@ -11,7 +11,7 @@ angular.module('10digit.legal', ['ngResource', '10digit.utils'])
 })
 
 .controller('LegalCtrl',['$scope', '$resource', 'ModalInstanceService', 'LegalConfig', function($scope, $resource, Modal, Config){
-	if(Config.testing){
+	if(Config.testMode){
 		$scope.legal = Config.initialValues.legal;
 	}
 	if(!$scope['legal_']) $scope['legal_'] = {};
