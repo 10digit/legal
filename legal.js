@@ -14,7 +14,7 @@ angular.module('10digit.legal', ['ngResource', '10digit.utils'])
 	if(Config.testMode){
 		$scope.legal = Config.initialValues.legal;
 	}
-	if(!$scope['legal%']) $scope['legal%'] = {};
+	if(!$scope['legal_s']) $scope['legal_s'] = {};
 	$scope.agreements = {tos: '', loa: '', privacy: ''};
 	var Resource = $resource('/api/legal');
 	var resource = Resource.get({}, function(){
@@ -33,7 +33,7 @@ angular.module('10digit.legal', ['ngResource', '10digit.utils'])
 
 		modal.result.then(function(){
 			var key = function(){ return content + '_signed';}
-			$scope['legal%'][key()] = true;
+			$scope['legal_s'][key()] = true;
 		});
 
 		return false;
